@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Book Your Session - Pixel Perfect Studios</title>
+    <link rel="stylesheet" href="style.css"> <!-- Assuming this links to your existing CSS -->
+    <style>
+        /* Booking page specific styles */
+        .booking-section {
+            padding: 100px 20px 60px; /* Top padding accounts for fixed nav */
+            background-color: #f4f4f4;
+            min-height: 100vh;
+            text-align: center;
+        }
+
+        .booking-container {
+            max-width: 800px;
+            margin: 0 auto;
+            background: white;
+            padding: 2rem;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        .booking-container h1 {
+            font-size: 2.5rem;
+            color: #23379a;
+            margin-bottom: 1.5rem;
+        }
+
+        .booking-form {
+            display: flex;
+            flex-direction: column;
+            gap: 1.5rem;
+            text-align: left;
+        }
+
+        .form-group {
+            display: flex;
+            flex-direction: column;
+            gap: 0.5rem;
+        }
+
+        .form-group label {
+            font-weight: bold;
+            color: #333;
+        }
+
+        .form-group input,
+        .form-group select,
+        .form-group textarea {
+            padding: 10px;
+            border: 2px solid #ddd;
+            border-radius: 4px;
+            font-size: 1rem;
+            width: 100%;
+            box-sizing: border-box;
+        }
+
+        .form-group textarea {
+            resize: vertical;
+            min-height: 100px;
+        }
+
+        .submit-btn {
+            background: #23379a;
+            color: white;
+            padding: 12px 20px;
+            border: 2px solid #23379a;
+            border-radius: 4px;
+            font-size: 1.2rem;
+            font-weight: bold;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            align-self: center;
+        }
+
+        .submit-btn:hover {
+            background: #228be6;
+            border-color: #228be6;
+        }
+
+        /* Responsive adjustments */
+        @media (max-width: 768px) {
+            .booking-container {
+                padding: 1.5rem;
+            }
+
+            .booking-container h1 {
+                font-size: 2rem;
+            }
+        }
+    </style>
+</head>
+<body>
+<!-- Navigation (same as your main page) -->
+<nav>
+    <div class="logo">
+        <img src="images/logo.png" alt="Company Logo">
+    </div>
+    <div class="nav-center">
+        <ul class="nav-links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="index.html#about">About Us</a></li>
+            <li><a href="index.html#services">Our Services</a></li>
+            <li><a href="index.html#contact">Contact</a></li>
+        </ul>
+        <div class="nav-buttons">
+            <a href="login.html" class="login-btn">Log In</a>
+            <a href="signup.html" class="signup-btn">Sign Up</a>
+        </div>
+    </div>
+    <div class="nav-spacer"></div>
+</nav>
+
+<!-- Booking Section -->
+<section class="booking-section">
+    <div class="booking-container">
+        <h1>Book Your Session</h1>
+        <form class="booking-form" action="#" method="POST">
+            <div class="form-group">
+                <label for="service">Select Service</label>
+                <select id="service" name="service" required>
+                    <option value="" disabled selected>Choose a service</option>
+                    <option value="wedding">Wedding Photography</option>
+                    <option value="birthday">Birthday Photography</option>
+                    <option value="event">Event Videography</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <label for="name">Full Name</label>
+                <input type="text" id="name" name="name" placeholder="Enter your full name" required>
+            </div>
+            <div class="form-group">
+                <label for="email">Email Address</label>
+                <input type="email" id="email" name="email" placeholder="Enter your email" required>
+            </div>
+            <div class="form-group">
+                <label for="phone">Phone Number</label>
+                <input type="tel" id="phone" name="phone" placeholder="Enter your phone number" required>
+            </div>
+            <div class="form-group">
+                <label for="date">Preferred Date</label>
+                <input type="date" id="date" name="date" required>
+            </div>
+            <div class="form-group">
+                <label for="details">Additional Details</label>
+                <textarea id="details" name="details" placeholder="Tell us more about your event (e.g., location, duration, special requests)"></textarea>
+            </div>
+            <button type="submit" class="submit-btn">Submit Booking</button>
+        </form>
+    </div>
+</section>
+
+<!-- Footer (same as your main page) -->
+<footer id="contact">
+    <p>© 2023 Photography & Videography Booking System</p>
+    <p>Contact:
+        <a href="tel:+94712345678">+94 71 234 5678</a> |
+        <a href="tel:+94779876543">+94 77 987 6543</a>
+    </p>
+    <p>Address: 123, Main Street, Colombo, Sri Lanka</p>
+</footer>
+</body>
+</html>
